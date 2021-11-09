@@ -5,6 +5,7 @@ import RsvpForm from './RsvpForm/index'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { ApolloProvider } from '@apollo/react-hooks';
 import ApolloClient from 'apollo-boost';
+import {useState} from 'react';
 
 const Page = ({name}) => {
   switch(name){
