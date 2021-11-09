@@ -23,7 +23,12 @@ function App() {
     The wedding will take place at Margartiaville Beach Hotel.
     <br/>
     Address: 165 FORT PICKENS ROAD, PENSACOLA BEACH, FL 32561
-    <Footer/>
+    <footer>
+      
+    <a href='https://forms.gle/DKUwBo5KJ9yEcYoS8'>
+                Please click this link to RSVP. Include the names of everyone who will be attending.
+            </a>
+    </footer>
     </div>
 /* <ApolloProvider client={client}>
   <Router>
