@@ -6,13 +6,26 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { ApolloProvider } from '@apollo/react-hooks';
 import ApolloClient from 'apollo-boost';
 
+const Page = ({name}) => {
+  switch(name){
+    case 'Venue': return <Venue />;
+  }
+}
+
 function App() {
+  const [currentPage, setCurrentPage] = useState('Venue');
+  const handlePageChange = (value) => setCurrentPage(value);
+
   return(
-    <div className="App">
-      <Venue/>
-      <RsvpForm/>
+    <div>
+          <div id="nav">
+      <Nav handlePageChange ={handlePageChange} />
+      </div>
+      <div>
+        <Page name={currentPage} />
+      </div> 
     </div>
-    );
+  );
 }
 
 export default App;
