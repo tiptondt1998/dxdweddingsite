@@ -5,43 +5,14 @@ import RsvpForm from './RsvpForm/index'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { ApolloProvider } from '@apollo/react-hooks';
 import ApolloClient from 'apollo-boost';
-// const client = new ApolloClient({
-//   request: (operation) => {
-//     const token = localStorage.getItem('id_token');
-//     operation.setContext({
-//       headers: {
-//         authorization: token ? `Bearer ${token}` : '',
-//       },
-//     });
-//   },
-//   uri: 'http://localhost:3001/graphql',
-// });
 
 function App() {
   return(
-    <div>
-    The wedding will take place at Margartiaville Beach Hotel.
-    <br/>
-    Address: 165 FORT PICKENS ROAD, PENSACOLA BEACH, FL 32561
-    <footer>
-      
-    <a href='https://forms.gle/DKUwBo5KJ9yEcYoS8'>
-                Please click this link to RSVP. Include the names of everyone who will be attending.
-            </a>
-    </footer>
+    <div className="App">
+      <Venue/>
+      <RsvpForm/>
     </div>
-/* <ApolloProvider client={client}>
-  <Router>
-        <div className="App">
-      <Route exact path='/' component={Venue}/>
-       <footer>
-        <RsvpForm />
-      </footer>
-    </div>
-  );
-  </Router>
-</ApolloProvider> */
-  );
+    );
 }
 
 export default App;
