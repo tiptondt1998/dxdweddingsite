@@ -23,9 +23,9 @@ function App() {
   <Router>
         <div className="App">
       <Route exact path='/' component={Venue}/>
-      {/* <footer>
+       <footer>
         <RsvpForm />
-      </footer> */}
+      </footer>
     </div>
   );
   </Router>
